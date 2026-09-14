@@ -1,9 +1,10 @@
 let projects = [];
+let resumeData = {};
+const TABS = ['projects', 'experience', 'resume'];
 
 function switchTab(tab) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
-  document.getElementById('tab-projects').classList.toggle('hidden', tab !== 'projects');
-  document.getElementById('tab-resume').classList.toggle('hidden', tab !== 'resume');
+  TABS.forEach(t => document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab));
 }
 
 function authHeaders() {
@@ -19,7 +20,14 @@ async function loadAll() {
   projects = pRes.ok ? await pRes.json() : [];
   renderProjects();
   const resume = rRes.ok ? await rRes.text() : '{}';
-  document.getElementById('resume-json').value = JSON.stringify(JSON.parse(resume), null, 2);
+  resumeData = JSON.parse(resume);
+  if (!Array.isArray(resumeData.experience)) resumeData.experience = [];
+  syncResumeTextarea();
+  renderExperience();
+}
+
+function syncResumeTextarea() {
+  document.getElementById('resume-json').value = JSON.stringify(resumeData, null, 2);
 }
 
 function renderProjects() {
@@ -53,6 +61,41 @@ function removeProject(i) {
   renderProjects();
 }
 
+function renderExperience() {
+  const el = document.getElementById('experience-cards');
+  el.innerHTML = resumeData.experience.map((e, i) => `
+    <div class="card">
+      <div class="card-row"><span>Role ${i + 1}</span>
+        <button class="btn-danger" onclick="removeExperience(${i})">Remove</button>
+      </div>
+      <label>Title</label>
+      <input value="${escAttr(e.title)}" oninput="resumeData.experience[${i}].title=this.value">
+      <label>Organization</label>
+      <input value="${escAttr(e.org)}" oninput="resumeData.experience[${i}].org=this.value">
+      <label>Dates (e.g. "Mar 2026 – Present")</label>
+      <input value="${escAttr(e.dates)}" oninput="resumeData.experience[${i}].dates=this.value">
+      <label>Intro (optional, one-line summary)</label>
+      <input value="${escAttr(e.intro)}" oninput="resumeData.experience[${i}].intro=this.value || null">
+      <label>Bullets (one per line)</label>
+      <textarea rows="6" oninput="updateExperienceBullets(${i}, this.value)">${escAttr((e.bullets || []).join('\n'))}</textarea>
+    </div>
+  `).join('');
+}
+
+function updateExperienceBullets(i, text) {
+  resumeData.experience[i].bullets = text.split('\n').map(s => s.trim()).filter(Boolean);
+}
+
+function addExperience() {
+  resumeData.experience.push({ title: '', org: '', dates: '', intro: null, bullets: [] });
+  renderExperience();
+}
+
+function removeExperience(i) {
+  resumeData.experience.splice(i, 1);
+  renderExperience();
+}
+
 function escAttr(s) {
   return String(s || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 }
@@ -84,6 +127,26 @@ async function saveResume() {
       body: JSON.stringify(parsed)
     });
     if (!res.ok) throw new Error(await res.text());
+    resumeData = parsed;
+    if (!Array.isArray(resumeData.experience)) resumeData.experience = [];
+    renderExperience();
+    status.textContent = 'Saved — live in ~30–60s after Netlify rebuilds.'; status.className = 'ok';
+  } catch (e) {
+    status.textContent = 'Error: ' + e.message; status.className = 'err';
+  }
+}
+
+async function saveExperience() {
+  const status = document.getElementById('status-experience');
+  status.textContent = 'Saving…'; status.className = '';
+  try {
+    const res = await fetch('/.netlify/functions/resume', {
+      method: 'PUT',
+      headers: { ...authHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify(resumeData)
+    });
+    if (!res.ok) throw new Error(await res.text());
+    syncResumeTextarea();
     status.textContent = 'Saved — live in ~30–60s after Netlify rebuilds.'; status.className = 'ok';
   } catch (e) {
     status.textContent = 'Error: ' + e.message; status.className = 'err';

@@ -17,6 +17,10 @@ All notable changes to this portfolio site are documented here.
   never reaches the browser.
 - `Push.ps1` / `Push_Launcher.bat` — one-click force-push of this repo
   from `D:\Projects\Websites\Jaswant` to `jass666/jaswant-kanojia`.
+- An "Experience" tab in `admin.html`, alongside Projects and raw Resume
+  data — add/edit/remove roles (title, org, dates, intro, bullets) without
+  hand-editing `resume-data.json`'s JSON directly. Shares the same
+  `resume.js` endpoint as the raw-JSON tab, so both stay in sync.
 
 ### Fixed
 - Netlify Identity invite/recovery/confirmation emails always link to the
