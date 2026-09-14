@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Netlify Identity emails (invite / password reset / confirm) always
+     link to the site root, not /admin.html — catch that here and hop
+     over before anything else loads, so the link works no matter what
+     page it lands on. -->
+<script>
+(function(){
+  var h = location.hash;
+  if (h && /(invite_token|recovery_token|confirmation_token)=/.test(h)) {
+    location.replace('/admin.html' + h);
+  }
+})();
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-81LQ6HDE25"></script>
 <script>
