@@ -1,0 +1,11 @@
+# Never commit real secrets — Push.ps1 runs `git add -A`, and this
+# repo is public, so anything not excluded here goes to GitHub.
+.env
+
+# Netlify CLI local state
+.netlify/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.log

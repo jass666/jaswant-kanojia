@@ -45,6 +45,11 @@ admin.html                          the admin panel (Netlify Identity gated)
 netlify.toml                        tells Netlify where the Functions live
 Jaswant_Kanojia_Resume.docx         a sample export, pre-generated and visually verified, for reference
 SETUP.md                            this file
+Push.ps1                            force-pushes this folder to jass666/jaswant-kanojia
+Push_Launcher.bat                   double-click entry point for Push.ps1
+.env                                 local env values for `netlify dev` — fill in and never commit
+.env.example                        safe-to-commit template showing which keys are required
+.gitignore                           excludes .env (critical — Push.ps1 runs `git add -A`)
 
 assets/
   css/
@@ -80,6 +85,12 @@ repo, replacing the existing `index.html`. Keep the folders as-is —
 `admin.html` at the repo root. Commit and push — Netlify redeploys
 automatically, same as it does now.
 
+> Before you run `Push.ps1` or `git add -A` any other way: fill in
+> `.env` with your real token only *after* confirming `.gitignore`
+> made it into the folder too. This repo is public — anything not
+> excluded in `.gitignore` goes to GitHub the moment you push,
+> including a real token sitting in a committed `.env`.
+
 ### 2. Create a GitHub token (repo-scoped, contents only)
 GitHub → Settings → Developer settings → Fine-grained tokens →
 Generate new token.
@@ -89,7 +100,18 @@ Generate new token.
 - Copy the token once — you won't see it again.
 
 ### 3. Add environment variables in Netlify
-Site settings → Environment variables → add:
+Fill in the real values in `.env` (keep it local — never commit it,
+`.gitignore` already excludes it), then either:
+
+- **Fastest:** with the [Netlify CLI](https://docs.netlify.com/cli/get-started/)
+  installed and logged in from this folder, run:
+  ```
+  netlify env:import .env
+  ```
+  This pushes all 5 values to your site's production environment in
+  one shot.
+- **Or manually:** Site settings → Environment variables → add each
+  of the 5 keys below by hand.
 
 | Key | Value |
 |---|---|
@@ -97,7 +119,7 @@ Site settings → Environment variables → add:
 | `GITHUB_OWNER` | `jass666` |
 | `GITHUB_REPO` | your repo name — see note below |
 | `GITHUB_BRANCH` | `main` |
-| `ADMIN_EMAIL` | `jaswantkanojia04@gmail.com` |
+| `ADMIN_EMAIL` | `jaswantkanojia4@gmail.com` |
 
 > `GITHUB_REPO` is assumed to be `jaswant-kanojia` (from the zip
 > filename `jaswant-kanojia-main.zip`, which is what GitHub names a
@@ -109,7 +131,7 @@ Site settings → Environment variables → add:
 Site settings → Identity → Enable Identity.
 - Registration preferences → **Invite only** (not open — this is
   what makes `/admin` exclusive to you)
-- Identity → Invite users → invite `jaswantkanojia04@gmail.com`,
+- Identity → Invite users → invite `jaswantkanojia4@gmail.com`,
   accept the invite email, set a password.
 
 ### 5. Test it
