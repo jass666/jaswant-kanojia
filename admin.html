@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — Jaswant Kanojia</title>
+<meta name="robots" content="noindex, nofollow">
+<script defer type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+<header>
+  <h1>Portfolio admin</h1>
+  <div id="who"></div>
+</header>
+
+<div id="gate">
+  <p>This page is restricted to Jaswant.</p>
+  <button class="btn-primary" onclick="netlifyIdentity.open('login')">Log in</button>
+</div>
+
+<main id="app" class="hidden">
+  <tabs>
+    <button class="tab-btn active" data-tab="projects" onclick="switchTab('projects')">Projects</button>
+    <button class="tab-btn" data-tab="resume" onclick="switchTab('resume')">Resume data</button>
+  </tabs>
+
+  <section id="tab-projects">
+    <div id="project-cards"></div>
+    <button class="btn-ghost" onclick="addProject()">+ Add project</button>
+    <div class="actions">
+      <button class="btn-primary" onclick="saveProjects()">Save changes</button>
+      <span id="status"></span>
+    </div>
+  </section>
+
+  <section id="tab-resume" class="hidden">
+    <p style="color:var(--muted); font-size:13px;">
+      Raw JSON — matches the resume-data.json schema used by the site's PDF/DOCX export.
+      Keep the structure the same; only edit values.
+    </p>
+    <textarea id="resume-json" spellcheck="false"></textarea>
+    <div class="actions">
+      <button class="btn-primary" onclick="saveResume()">Save changes</button>
+      <span id="status-resume"></span>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/admin.js"></script>
+
+</body>
+</html>

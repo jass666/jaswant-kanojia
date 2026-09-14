@@ -1,0 +1,10 @@
+[
+  { "note": "CRM", "name": "LeadForge", "desc": "Flask/PostgreSQL CRM managing 826+ leads across three dealership brands.", "domain": "kzleadforge.up.railway.app", "url": "https://kzleadforge.up.railway.app/" },
+  { "note": "Open source", "name": "Cash Ledger", "desc": "Personal expense ledger — imports bank statements, auto-categorises transactions.", "domain": "kzledger.pages.dev", "url": "https://kzledger.pages.dev/" },
+  { "note": "Open source", "name": "KZ Downloader", "desc": "Browser GUI that generates yt-dlp commands for any social profile or channel.", "domain": "kzdownloader.pages.dev", "url": "https://kzdownloader.pages.dev/" },
+  { "note": "Open source", "name": "The Auction Manual", "desc": "Scrollspy'd reference covering Google Ads and Meta Ads end to end.", "domain": "adguide.pages.dev", "url": "https://adguide.pages.dev/" },
+  { "note": "Dealership site", "name": "LDE (combined)", "desc": "Landing page unifying the Royal Enfield and Bajaj dealership brands.", "domain": "kzlde.pages.dev", "url": "https://kzlde.pages.dev/" },
+  { "note": "Dealership site", "name": "Royal Enfield", "desc": "Motorcycle and lifestyle communication, EMI calculator, structured data.", "domain": "kzldere.pages.dev", "url": "https://kzldere.pages.dev/" },
+  { "note": "Dealership site", "name": "LDE Bajaj", "desc": "Passenger and cargo three-wheeler product and offer communication.", "domain": "ldebajaj.pages.dev", "url": "https://ldebajaj.pages.dev/" },
+  { "note": "Dealership site", "name": "Swift Trucks", "desc": "Tata commercial-vehicle dealership site with comparison tools.", "domain": "kzswiftrucks.pages.dev", "url": "https://kzswiftrucks.pages.dev/" }
+]

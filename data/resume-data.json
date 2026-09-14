@@ -1,0 +1,96 @@
+{
+  "name": "JASWANT KANOJIA",
+  "title": "Marketing Operations & MarTech Specialist",
+  "tagline": "Growth Systems | CRM Automation | Lead Operations | Local SEO | Digital Asset Operations | Content Production",
+  "contact": {
+    "location": "Lucknow, Uttar Pradesh",
+    "remote": "Open to Remote",
+    "email": "jaswantkanojia04@gmail.com",
+    "linkedin": "linkedin.com/in/jaswant-kanojia",
+    "phone": "8601615224"
+  },
+  "executiveSummary": "Marketing Operations & MarTech Specialist who builds the systems that run marketing for a 3-brand, 22-location automotive dealership group, not just the campaigns on top of it. Designed and built a proprietary CRM and lead-operations platform (LeadForge) from zero, a Digital Asset Operations system now tracking 200+ assets across locations, and the workflow that took Google Business Profile coverage from 2 to 17 verified locations. Runs content production end-to-end — directing external videographers and designers on website, logo, and video work, while personally shooting and editing photo/video content and trial reels (CapCut, Filmora, Affinity Suite) to test formats before scaling. Comfortable operating at the intersection of marketing, engineering, and analytics — writes production Python/Flask and Google Apps Script, integrates the Meta Graph API and WhatsApp Business API, and reports on GA4 and Google Business Profile data through self-built dashboards. Looking to bring the same systems-first approach to a Marketing Operations, MarTech, or CRM Operations team with more scale and more hands to build alongside.",
+  "impactSnapshot": [
+    "826+ active leads currently managed through a self-built CRM platform (LeadForge)",
+    "700+ leads processed end-to-end through structured, automated workflows",
+    "17 Google Business Profile locations verified and operational, up from 2, across 22 dealership locations",
+    "5 dealership websites designed, rebuilt, and shipped, with technical SEO and conversion tracking",
+    "198+ marketing assets managed through a custom Digital Asset Operations system",
+    "~600 unattended Meta leads recovered and brought back into active pipeline",
+    "Lead response time cut to under 30 minutes during business hours",
+    "Entire lead pipeline run on ₹0 active paid ad spend — 100% organic and owned channels"
+  ],
+  "coreExpertise": [
+    "Marketing Operations & Systems Design",
+    "CRM Strategy & Lead Lifecycle Management",
+    "Marketing Automation & Workflow Design",
+    "Local SEO & Multi-Location Google Business Profile Management",
+    "Digital Asset Management (DAM) & Content Operations",
+    "Website Strategy & Conversion Optimisation",
+    "Analytics, Reporting & Dashboard Development",
+    "Cross-Functional Coordination (Sales, Creative, Leadership, External Vendors)",
+    "Creative Direction, Brand Storytelling & Campaign Planning",
+    "Photo & Video Content Production, Editing & A/B Testing"
+  ],
+  "techStack": [
+    { "label": "Languages & Backend", "value": "Python, Flask, SQL, HTML, CSS, Google Apps Script" },
+    { "label": "Databases", "value": "PostgreSQL, SQLite" },
+    { "label": "Integrations & APIs", "value": "Meta Graph API, WhatsApp Business API (Gupshup), REST APIs, Google Sheets API" },
+    { "label": "Analytics & Measurement", "value": "Google Analytics 4, Google Tag Manager, Google Search Console, Microsoft Clarity, Looker Studio (in progress)" },
+    { "label": "Platforms & Infrastructure", "value": "Google Business Profile, Git/GitHub, Cloudflare Pages, Netlify, WordPress" },
+    { "label": "Content Production & Editing", "value": "CapCut, Filmora, Affinity Photo/Designer/Publisher — photo and video editing, trial-reel testing, basic graphic design" }
+  ],
+  "experience": [
+    {
+      "title": "Marketing Operations & Digital Marketing Associate",
+      "org": "Lucknow Diesel & Electricals (LDE Royal Enfield · LDE Bajaj) and Swift Trucks LLP (Tata Commercial Vehicles)",
+      "dates": "Mar 2026 – Present",
+      "intro": "Sole digital marketing function for a 3-brand, 22-location dealership group across Uttar Pradesh. Owns strategy, systems, and execution end-to-end.",
+      "bullets": [
+        "Designed and built LeadForge, a proprietary marketing operations platform (Flask/PostgreSQL) replacing informal spreadsheet-based lead tracking. Runs lead intake, lifecycle tracking, Meta/WhatsApp integration, and reporting for 826+ active leads across all three brands.",
+        "Recovered ~600 unattended Meta leads sitting untouched at the time of joining by designing a structured intake-to-assignment workflow, and cut average lead response time to under 30 minutes during business hours.",
+        "Architected a Digital Asset Operations system to solve a 22-location content bottleneck — a low-friction upload and tagging workflow usable by non-technical showroom staff, now tracking 198+ marketing assets with automatic status sync and cross-brand visibility.",
+        "Designed and executed the workflow that took Google Business Profile presence from 2 to 17 verified, fully-optimised locations, including on-site verification across multiple Uttar Pradesh districts.",
+        "Rebuilt 5 dealership websites from the ground up (Cloudflare Pages) with technical SEO fixes, GA4/GTM/Search Console instrumentation, and conversion-focused lead capture forms.",
+        "Directed cross-functional creative vendors, coordinating with freelance videographers and graphic designers on website revamps, logo design, and video shoots — translating brand and business goals into creative briefs, shot lists, and design direction.",
+        "Built and scaled WhatsApp Business API infrastructure (Gupshup) end-to-end — number import/provisioning, 50,000+ segmented contacts, and broadcast campaigns with A/B tested messaging to improve response rates.",
+        "Own hands-on creative production — campaign concepts, shot lists, and editing briefs, plus personally shooting and editing content and trial reels (CapCut, Filmora, Affinity Suite) to validate formats before scale.",
+        "Currently designing a GBP/Looker Studio analytics pipeline (Apps Script → PostgreSQL → Flask) to unify performance reporting across all 22 locations, pending Google API quota approval."
+      ]
+    },
+    {
+      "title": "Freelance Digital Marketer",
+      "org": "Independent — Lucknow",
+      "dates": "Prior to LDE Motors",
+      "intro": null,
+      "bullets": [
+        "Managed Meta Ads, Local SEO, and Google Business Profile optimisation for 17 local businesses, generating 1,000–2,000 monthly campaign responses on ad budgets as low as ₹3,000/month."
+      ]
+    }
+  ],
+  "infrastructure": [
+    {
+      "title": "LeadForge — Marketing Operations Platform",
+      "problem": "lead activity for 3 brands across 22 locations lived in disconnected spreadsheets and WhatsApp threads, with no accountability or lifecycle visibility.",
+      "built": "a Flask/PostgreSQL CRM with canonical record IDs per brand, automated reconciliation against Google Sheets, role-based assignment, Meta and WhatsApp Business API integration, and an employee performance dashboard — now in its 25th+ iteration with full technical documentation.",
+      "result": "826+ leads under active, trackable management; 700+ processed through structured workflow; the architecture is now being explored for multi-tenant SaaS productization."
+    },
+    {
+      "title": "Digital Asset Operations System",
+      "problem": "marketing assets from 22 locations had no central tracking — files were lost, duplicated, or never made it from showroom floor to published post.",
+      "built": "a Google Apps Script-based intake and lifecycle logger with automatic categorisation, publication-status tracking, and daily reconciliation, designed for zero-training use by non-technical showroom staff.",
+      "result": "198+ assets tracked end-to-end with full lifecycle visibility, replacing what had been an untracked, manual process."
+    },
+    {
+      "title": "Local Presence & GBP Operations Framework",
+      "problem": "only 2 of 22 dealership locations had a functioning, accurate Google Business Profile — most local search traffic was invisible.",
+      "built": "a repeatable verification and optimisation workflow, executed through direct field visits across multiple Uttar Pradesh districts, plus the operating process for maintaining profile accuracy at scale.",
+      "result": "17 locations verified and fully operational, materially expanding local search and Maps visibility for the dealership group."
+    }
+  ],
+  "education": [
+    "B.Sc. (Physics & Chemistry) — University of Lucknow 2020",
+    "Google Digital Marketing Professional Certificate (2026) · HubSpot Digital Marketing Certification (2026)",
+    "Foundational IT: ADCA · DCA · CCC (NIELIT)"
+  ]
+}
