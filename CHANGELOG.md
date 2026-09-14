@@ -18,6 +18,14 @@ All notable changes to this portfolio site are documented here.
 - `Push.ps1` / `Push_Launcher.bat` — one-click force-push of this repo
   from `D:\Projects\Websites\Jaswant` to `jass666/jaswant-kanojia`.
 
+### Fixed
+- Netlify Identity invite/recovery/confirmation emails always link to the
+  site root, not `/admin.html`, so the widget never saw the token and the
+  "create new password" step never appeared — only a login button did.
+  `index.html` now detects `invite_token` / `recovery_token` /
+  `confirmation_token` in the URL hash on load and forwards it straight to
+  `/admin.html` before anything else runs.
+
 ### Changed
 - The "Live right now" showcase grid no longer has hardcoded project
   cards — it now fetches and renders from `data/projects.json`, so new
