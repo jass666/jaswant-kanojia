@@ -9,11 +9,11 @@
     "linkedin": "linkedin.com/in/jaswant-kanojia",
     "phone": "8601615224"
   },
-  "executiveSummary": "Marketing Operations & MarTech Specialist who builds the systems that run marketing for a 3-brand, 22-location automotive dealership group, not just the campaigns on top of it. Designed and built a proprietary CRM and lead-operations platform (LeadForge) from zero, a Digital Asset Operations system now tracking 200+ assets across locations, and the workflow that took Google Business Profile coverage from 2 to 17 verified locations. Runs content production end-to-end — directing external videographers and designers on website, logo, and video work, while personally shooting and editing photo/video content and trial reels (CapCut, Filmora, Affinity Suite) to test formats before scaling. Comfortable operating at the intersection of marketing, engineering, and analytics — writes production Python/Flask and Google Apps Script, integrates the Meta Graph API and WhatsApp Business API, and reports on GA4 and Google Business Profile data through self-built dashboards. Looking to bring the same systems-first approach to a Marketing Operations, MarTech, or CRM Operations team with more scale and more hands to build alongside.",
+  "executiveSummary": "Marketing Operations & MarTech Specialist who builds the systems that run marketing for a 3-brand, 22-location automotive dealership group, not just the campaigns on top of it. Designed and built a proprietary CRM and lead-operations platform (LeadForge) from zero, a Digital Asset Operations system now tracking 200+ assets across locations, and the workflow that took Google Business Profile coverage from 2 to 24 verified locations. Runs content production end-to-end — directing external videographers and designers on website, logo, and video work, while personally shooting and editing photo/video content and trial reels (CapCut, Filmora, Affinity Suite) to test formats before scaling. Comfortable operating at the intersection of marketing, engineering, and analytics — writes production Python/Flask and Google Apps Script, integrates the Meta Graph API and WhatsApp Business API, and reports on GA4 and Google Business Profile data through self-built dashboards. Looking to bring the same systems-first approach to a Marketing Operations, MarTech, or CRM Operations team with more scale and more hands to build alongside.",
   "impactSnapshot": [
     "826+ active leads currently managed through a self-built CRM platform (LeadForge)",
     "700+ leads processed end-to-end through structured, automated workflows",
-    "17 Google Business Profile locations verified and operational, up from 2, across 22 dealership locations",
+    "22 Google Business Profile locations verified and operational, up from 2, across 24 dealership locations",
     "5 dealership websites designed, rebuilt, and shipped, with technical SEO and conversion tracking",
     "198+ marketing assets managed through a custom Digital Asset Operations system",
     "~600 unattended Meta leads recovered and brought back into active pipeline",
@@ -33,12 +33,30 @@
     "Photo & Video Content Production, Editing & A/B Testing"
   ],
   "techStack": [
-    { "label": "Languages & Backend", "value": "Python, Flask, SQL, HTML, CSS, Google Apps Script" },
-    { "label": "Databases", "value": "PostgreSQL, SQLite" },
-    { "label": "Integrations & APIs", "value": "Meta Graph API, WhatsApp Business API (Gupshup), REST APIs, Google Sheets API" },
-    { "label": "Analytics & Measurement", "value": "Google Analytics 4, Google Tag Manager, Google Search Console, Microsoft Clarity, Looker Studio (in progress)" },
-    { "label": "Platforms & Infrastructure", "value": "Google Business Profile, Git/GitHub, Cloudflare Pages, Netlify, WordPress" },
-    { "label": "Content Production & Editing", "value": "CapCut, Filmora, Affinity Photo/Designer/Publisher — photo and video editing, trial-reel testing, basic graphic design" }
+    {
+      "label": "Languages & Backend",
+      "value": "Python, Flask, SQL, HTML, CSS, Google Apps Script"
+    },
+    {
+      "label": "Databases",
+      "value": "PostgreSQL, SQLite"
+    },
+    {
+      "label": "Integrations & APIs",
+      "value": "Meta Graph API, WhatsApp Business API (Gupshup), REST APIs, Google Sheets API"
+    },
+    {
+      "label": "Analytics & Measurement",
+      "value": "Google Analytics 4, Google Tag Manager, Google Search Console, Microsoft Clarity, Looker Studio (in progress)"
+    },
+    {
+      "label": "Platforms & Infrastructure",
+      "value": "Google Business Profile, Git/GitHub, Cloudflare Pages, Netlify, WordPress"
+    },
+    {
+      "label": "Content Production & Editing",
+      "value": "CapCut, Filmora, Affinity Photo/Designer/Publisher — photo and video editing, trial-reel testing, basic graphic design"
+    }
   ],
   "experience": [
     {
